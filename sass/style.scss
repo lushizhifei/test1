@@ -1,0 +1,55 @@
+$width:300px;
+$margin-top:5px;
+$bgcolor:#ccc;
+#container{
+	width:$width;
+	height:300px;
+	margin-top:$margin-top;
+	background:$bgcolor;
+}
+.test{
+	width:$width;
+	height:200px;
+	margin-top:$margin-top;
+	background:$bgcolor;
+}
+.demo{
+	width:$width;
+	height:100px;
+	margin-top:$margin-top;
+	background:$bgcolor;
+}
+#container{
+	div{width:300px}
+	span{background:blue}
+	p{height:100px}
+}
+a{
+	&:link{color:black}
+	&:visited{color:red}
+}
+@mixin test($m:5px,$p:3px){
+	margin:$m;
+	padding:$p;
+	border:1px solid;
+}
+.test1{
+	@include test(5px,3px);
+	background:red;
+	color:yellow;
+}
+.test2{
+	@include test(10px,20px);
+	background:yellow;
+	color:red;
+}
+.test3{
+	@include test;
+	background:yellow;
+	color:red;
+}
+.test4{
+	@extend .test3;
+	width:300px;
+	height:500px;
+}

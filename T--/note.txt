@@ -1,0 +1,30 @@
+sass、less -- CSS预处理器(通过类似 JS 逻辑编码的方式来实现 CSS 的开发，使我们在CSS开发时，可以使用诸如变量、运算符、条件结构、循环结构、函数等)
+
+sass 是基于 ruby 的环境来实现 CSS 开发
+	1. 先安装 ruby ，再安装 sass，使用命令行来编译 sass 文件（复杂）
+	2. 直接安装编译工具，如：考拉(koala) (简单)
+	sass --> css
+
+
+模块化开发
+	http://www.runoob.com/w3cnote/requirejs-tutorial-1.html
+	http://www.runoob.com/w3cnote/requirejs-tutorial-2.html
+
+	<script src="require.js" data-main="main"></script>
+
+	define([依赖模块], function(){
+		// 模块完成的功能
+	}) -- 定义模块
+
+	require([依赖模块], function(){
+		// 调用各依赖模块实现功能
+	});
+
+	// 配置
+	require.config({
+		baseUrl : "day01/demo/test/js", // 路径默认目录
+		paths : { // 各模块路径的简写
+			short_name : ["test1", "", ""],
+			short_name : ["test2", "", ""]
+		}
+	});
